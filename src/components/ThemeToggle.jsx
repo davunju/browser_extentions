@@ -26,7 +26,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="p-3 bg-neutral-100 dark:bg-neutral-700 cursor-pointer hover:bg-neutral-300 hover:ring ring-neutral-400 rounded-lg"
+      className="p-3 bg-neutral-100 dark:bg-neutral-700 cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:ring ring-neutral-400 rounded-lg focus:outline-1 focus:outline-offset-2 focus:outline-red-700"
     >
       {darkMode ? <img src="/icon-sun.svg" /> : <img src="/icon-moon.svg" />}
     </button>

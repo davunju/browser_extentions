@@ -103,19 +103,19 @@ export default function App() {
   };
 
   const displayAll = () => {
-    window.location.reload();
+    setData(details);
   };
 
   const displayActive = () => {
-    setData((prev) => prev.filter((item) => item.isActive));
+    setData(details.filter((item) => item.isActive));
   };
 
   const displayInactive = () => {
-    setData((prev) => prev.filter((item) => item.isActive === false));
+    setData(details.filter((item) => item.isActive === false));
   };
 
   return (
-    <main className="w-full max-w-7xl mx-auto p-6">
+    <main className="w-full max-w-7xl mx-auto p-6 my-6">
       <div className="flex justify-between items-center p-3 ring ring-neutral-200 bg-white dark:bg-neutral-800 dark:ring-0 rounded-xl mb-5">
         <img src="/logo.svg" alt="" className="" />
         <ThemeToggle />
@@ -126,21 +126,24 @@ export default function App() {
           Extentions List
         </h1>
         <div className="flex justify-between gap-5 items-center">
+          <button className="border border-dashed border-neutral-200 self-center bg-white py-2 px-5 rounded-xl cursor-pointer focus:outline-1 focus:outline-offset-2 focus:outline-red-700 dark:bg-neutral-800 dark:border-neutral-600 dark:text-neutral-200 font-semibold dark:hover:bg-neutral-600">
+            Add Extention
+          </button>
           <button
             onClick={() => displayAll()}
-            className="bg-red-700 dark:bg-red-400 dark:text-neutral-900 dark:ring-0 text-white font-semibold py-2 px-5 ring ring-neutral-200 rounded-full cursor-pointer"
+            className="focus:bg-red-700 focus:dark:bg-red-400 focus:dark:outline-red-400 focus:dark:text-neutral-900 focus:dark:ring-0 focus:text-white focus:outline-1 focus:outline-offset-2 focus:outline-red-700 bg-white dark:bg-neutral-800 dark:ring-neutral-600 dark:text-neutral-200 font-semibold dark:hover:bg-neutral-600 py-2 px-5 ring ring-neutral-200 rounded-xl cursor-pointer"
           >
             All
           </button>
           <button
             onClick={() => displayActive()}
-            className="bg-white dark:bg-neutral-800 dark:ring-neutral-600 dark:text-neutral-200 font-semibold py-2 px-5 ring-1 ring-neutral-200 rounded-full cursor-pointer"
+            className="focus:bg-red-700 focus:dark:bg-red-400 focus:dark:outline-red-400 focus:dark:text-neutral-900 focus:dark:ring-0 focus:text-white focus:outline-1 focus:outline-offset-2 focus:outline-red-700 bg-white dark:bg-neutral-800 dark:ring-neutral-600 dark:text-neutral-200 font-semibold dark:hover:bg-neutral-600 py-2 px-5 ring-1 ring-neutral-200 rounded-xl cursor-pointer"
           >
             Active
           </button>
           <button
             onClick={() => displayInactive()}
-            className="bg-white dark:bg-neutral-800 dark:ring-neutral-600 dark:text-neutral-200 font-semibold py-2 px-5 ring-1 ring-neutral-200 rounded-full cursor-pointer"
+            className="focus:bg-red-700 focus:dark:bg-red-400 focus:dark:outline-red-400 focus:dark:text-neutral-900 focus:dark:ring-0 focus:text-white focus:outline-1 focus:outline-offset-2 focus:outline-red-700 bg-white dark:bg-neutral-800 dark:ring-neutral-600 dark:text-neutral-200 font-semibold dark:hover:bg-neutral-600 py-2 px-5 ring-1 ring-neutral-200 rounded-xl cursor-pointer"
           >
             Inactive
           </button>
@@ -165,14 +168,14 @@ export default function App() {
               <div className="flex justify-between items-center cursor-pointer">
                 <button
                   onClick={() => removeExt(detail.id)}
-                  className="ring ring-inset dark:text-neutral-200 ring-neutral-300 dark:ring-neutral-600 px-2 py-1 rounded-2xl text-sm cursor-pointer hover:bg-red-700 hover:text-neutral-200"
+                  className="ring ring-inset focus:outline-1 focus:outline-offset-2 focus:outline-red-700 dark:text-neutral-200 ring-neutral-300 dark:ring-neutral-600 px-2 py-1 rounded-2xl text-sm cursor-pointer hover:bg-red-700 hover:text-neutral-200"
                 >
                   Remove
                 </button>
                 {detail.isActive ? (
-                  <img className="size-8" src="/toggle-on-solid.svg" />
+                  <img className="size-8" src="/toggleon.svg" />
                 ) : (
-                  <img className="size-8" src="/toggle-off-solid.svg" />
+                  <img className="size-8" src="/toggleoff.svg" />
                 )}
               </div>
             </div>
