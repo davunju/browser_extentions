@@ -126,9 +126,11 @@ export default function App() {
           Extentions List
         </h1>
         <div className="flex justify-between gap-5 items-center">
+          {/* 
           <button className="border border-dashed border-neutral-200 self-center bg-white py-2 px-5 rounded-xl cursor-pointer focus:outline-1 focus:outline-offset-2 focus:outline-red-700 dark:bg-neutral-800 dark:border-neutral-600 dark:text-neutral-200 font-semibold dark:hover:bg-neutral-600">
             Add Extention
           </button>
+          */}
           <button
             onClick={() => displayAll()}
             className="focus:bg-red-700 focus:dark:bg-red-400 focus:dark:outline-red-400 focus:dark:text-neutral-900 focus:dark:ring-0 focus:text-white focus:outline-1 focus:outline-offset-2 focus:outline-red-700 bg-white dark:bg-neutral-800 dark:ring-neutral-600 dark:text-neutral-200 font-semibold dark:hover:bg-neutral-600 py-2 px-5 ring ring-neutral-200 rounded-xl cursor-pointer"
