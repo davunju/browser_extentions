@@ -116,11 +116,7 @@ export default function App() {
 
   return (
     <main className="w-full max-w-7xl mx-auto p-6 my-6">
-      <div className="flex justify-between items-center p-3 ring ring-neutral-200 bg-white dark:bg-neutral-800 dark:ring-0 rounded-xl mb-5">
-        <img src="/logo.svg" alt="" className="" />
-        <ThemeToggle />
-      </div>
-
+      <ThemeToggle />
       <div className="flex md:flex-row flex-col gap-5 justify-between items-center mt-12 mb-8">
         <h1 className="text-3xl font-bold text-neutral-900 dark:text-neutral-100">
           Extentions List

@@ -24,11 +24,24 @@ export default function ThemeToggle() {
   }, [darkMode]);
 
   return (
-    <button
-      onClick={() => setDarkMode(!darkMode)}
-      className="p-3 bg-neutral-100 dark:bg-neutral-700 cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:ring ring-neutral-400 rounded-lg focus:outline-1 focus:outline-offset-2 focus:outline-red-700"
-    >
-      {darkMode ? <img src="/icon-sun.svg" /> : <img src="/icon-moon.svg" />}
-    </button>
+    <nav>
+      <div className="flex justify-between items-center p-3 ring ring-neutral-200 bg-white dark:bg-neutral-800 dark:ring-0 rounded-xl mb-5">
+        {darkMode ? (
+          <img src="/logo_white_text.svg" />
+        ) : (
+          <img src="/logo.svg" alt="" className="" />
+        )}
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className="p-3 bg-neutral-100 dark:bg-neutral-700 cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:ring ring-neutral-400 rounded-lg focus:outline-1 focus:outline-offset-2 focus:outline-red-700"
+        >
+          {darkMode ? (
+            <img src="/icon-sun.svg" />
+          ) : (
+            <img src="/icon-moon.svg" />
+          )}
+        </button>
+      </div>
+    </nav>
   );
 }
